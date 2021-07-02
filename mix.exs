@@ -38,6 +38,7 @@ defmodule NorthwindApi.MixProject do
       {:plug_cowboy, "~> 2.0"},
       {:phoenix_swagger, "~> 0.8"},
       {:ex_json_schema, "~> 0.5"},
+      {:cors_plug, "~> 2.0"},
     ]
   end
 

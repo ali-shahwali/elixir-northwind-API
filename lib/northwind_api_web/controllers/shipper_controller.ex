@@ -78,9 +78,11 @@ defmodule NorthwindApiWeb.ShipperController do
   end
 
   def add_new(conn, %{"phone" => phone, "company_name" => company_name}) do
-    shipper = %Shipper{company_name: company_name, phone: phone}
-    Repo.insert!(shipper)
-    json(conn, shipper)
+    %Shipper{}
+      |>  Shipper.changeset(%{company_name: company_name, phone: phone})
+      |>  Repo.insert
+
+    json(conn, %Shipper{company_name: company_name, phone: phone})
   end
 
 end

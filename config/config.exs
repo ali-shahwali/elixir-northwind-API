@@ -29,4 +29,9 @@ config :northwind_api, :phoenix_swagger,
 
 config :phoenix_swagger, json_library: Jason
 
+config :cors_plug,
+  origin: ["https://localhost:44327"],
+  max_age: 86400,
+  methods: ["GET", "POST"]
+
 import_config "#{Mix.env()}.exs"

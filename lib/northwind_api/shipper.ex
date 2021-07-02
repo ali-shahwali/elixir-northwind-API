@@ -7,7 +7,7 @@ defmodule NorthwindApi.Shipper do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @primary_key {:shipper_id, :id, autogenerate: true}
+  @primary_key {:shipper_id, :id, autogenerate: false}
   @derive {Jason.Encoder, only: [:company_name, :phone]}
 
   schema "shippers" do

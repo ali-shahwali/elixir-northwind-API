@@ -14,8 +14,8 @@ defmodule NorthwindApiWeb.Router do
     patch "/shippers/:id", ShipperController, :update_shipper
     post "/shippers", ShipperController, :add_new
 
-    get "/users", UserController, :get_all
-    post "/users", UserController, :add_new
+    get "/orders", OrderController, :get_all
+    get "/orders/:id", OrderController, :get_by_customer_id
   end
 
   pipeline :browser do
